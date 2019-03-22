@@ -1,0 +1,37 @@
+<div class="container" style="text-align:center">
+  <div class="row" style="text-align:center">
+    <div class="col-md-12" style="font-size:18px">My Wishlist</div>
+    <br /><br /><br /><br />
+  </div>
+  <div class="row" style="text-align:center">
+    <div *ngFor="let track of allTracks" class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{ track.id }}</div>
+        <div class="panel-body">
+          <p>{{ track.name }}</p>
+          <img class="card-img-top" src='{{track.imageUrl}}' alt="Card image cap">
+          <p style ="margin-top: 10px;"><input type="text" [(ngModel)]="track.comment"></p>
+
+        </div>
+        <div class="panel-footer">
+          Comments: {{ track.comment }}<br />
+          <a [routerLink]="['/deleteTrack', track.id]" class="btn btn-danger"onClick= "window.location.reload();">Delete</a> 
+          <a [routerLink]="['/updateTrack', track.id,track.comment]" class="btn btn-primary"onClick= "window.location.reload();">Update</a>
+         </div> 
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <ul *ngFor = "let track of allTracks ">
+    <li>
+      {{track.id}}
+    </li>
+    <li>{{track.name}}</li>
+    <li>{{track.comment}}</li>
+    <a [routerLink]="['/deleteTrack', track.id]" class="btn btn-primary">Delete</a>
+    <a [routerLink]="['/updateTrack', track.id,track.comment]" class="btn btn-primary">Update</a>
+  </ul>
+</div> -->

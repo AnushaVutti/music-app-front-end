@@ -1,0 +1,12 @@
+.head {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: white;
+    background-color: black;
+    margin-left: 0.3rem;
+}
+#logo {
+    margin-top: 2%;
+}

@@ -1,0 +1,10 @@
+<form #createForm="ngForm" (ngSubmit)="search()" id="form-buscar">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" name="trackname" [(ngModel)]="trackname" placeholder="Track Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <span class="input-group-btn">
+      <button class="btn btn-outline-secondary" type="submit" id="button-addon2" onClick= "window.location.reload();">Search
+      <i class="glyphicon glyphicon-search" aria-hidden="true"></i> </button>
+    </span>
+    </div>
+</form>
+
